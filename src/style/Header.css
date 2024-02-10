@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+}
+
+.container {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  margin: auto;
+  padding: 0 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+ 
+}
+
+.navbar {
+  height: 70px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #B9090B;
+}
+.logo span{
+  font-style: italic;
+  font-size: 1rem;
+  position: relative;
+  top: -.5rem;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+ .logo img{
+  width: 2rem;
+  height: 2rem;
+  border-radius: .3rem;
+}
+.menu-icon {
+  display: none;
+  z-index: 10;
+  color: #4400ff;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.call {
+  display: flex;
+  position: absolute;
+  top: 1.55rem;
+  right: 4rem;
+  visibility: hidden;
+  color: #4400ff;
+}
+
+.nav-elements {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+}
+
+.login-btn {
+  color: #4400ff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid #4400ff;
+  border-radius: .2rem;
+  background-color: white;
+}
+
+.login a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #4400ff;
+  margin-right: 2rem;
+}
+
+.login button {
+  width: 5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+.login button:hover{
+  background-color: #0041c9;
+  color: white;
+  transition: all .5s;
+}
+.nav-elements ul {
+  margin-right: 2rem;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.nav-elements ul li {
+  margin-right: 20px;
+}
+
+li span {
+  border-radius: 1rem;
+  padding: .5px 6px;
+  font-size: .7rem;
+  background-color: #18A558;
+  color: white;
+}
+
+.nav-elements ul a {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #2f234f;
+  text-decoration: none;
+}
+
+
+@media (max-width: 1170px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+@media (max-width:500px) {
+  .logo h3{
+    display: none;
+  }
+  
+}
+@media (max-width: 975px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .call {
+
+    display: flex;
+    visibility: visible;
+
+  }
+
+  .login {
+    margin-left: 2.5rem;
+    display: flex;
+    justify-content: space-around;
+    float: left;
+    height: 7rem;
+    flex-direction: column;
+
+  }
+
+  .nav-elements {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0px;
+
+    background-color: #eaeaea;
+    width: 0px;
+    height: 100vh;
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+   
+  }
+
+  .nav-elements.active {
+    width: 250px;
+  }
+
+  .nav-elements ul {
+    margin-left: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+
+  .nav-elements ul li {
+    margin-right: unset;
+    margin-top: 1rem;
+  }
+}

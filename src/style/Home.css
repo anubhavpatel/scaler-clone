@@ -1,0 +1,14 @@
+.home-container img{
+    max-width: 100%;
+}
+.back2{
+ display: none;
+}
+@media (max-width: 768px) {
+    .back1{
+        display: none;
+    }
+    .back2{
+      display: block;
+       }
+}
